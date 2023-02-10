@@ -1,10 +1,45 @@
 html {
     height:100%;
-    background: -webkit-radial-gradient(10px 20px, ellipse, #6C6, #999);
+
+    background: -webkit-linear-gradient(0deg, #abf8e7,#8778c7);
+    background: linear-gradient(0deg, #abf8e7,#8778c7);
 }
 
 h1 {
     text-align: center;
     font-weight: bold;
-    margin-top: 60px;
+    margin-top: 30px;
+}
+
+.container {
+    text-align: left;
+    font-weight: bold;
+    justify-content: space-around;
+    display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: left;
+
+}
+
+
+input {
+  clear: both;
+  float: right;
+  margin-bottom: 10px;
+  width: auto;
+
+}
+
+button {
+    padding: 8px 15px;
+    text-align: center;
+    display: grid;
+    margin: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }

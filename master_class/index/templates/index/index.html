@@ -7,6 +7,15 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Запись на мастер класс</h1>
+<img src="{% static 'index/img/pngwing.com.png' %}" alt="альтернативный текст" class="center" width="150" height="150" >
+<h1>Запись к Ритке на мастер класс </h1>
+<div class="container">
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Записаться</button>
+
+</form>
+</div>
 </body>
 </html>
