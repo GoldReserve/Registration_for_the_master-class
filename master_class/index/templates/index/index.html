@@ -5,9 +5,14 @@
     <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        img {
+            margin: 30px;
+        }
+    </style>
 </head>
 <body>
-<img src="{% static 'index/img/pngwing.com.png' %}" alt="альтернативный текст" class="center" width="150" height="150" >
+<img src="{% static 'index/img/pngwing.com.png' %}" alt="альтернативный текст" class="center" width="240" height="240" >
 <h1>Запись к Ритке на мастер класс </h1>
 <div class="container">
 <form action="{% url 'index' %}" method="post">
@@ -16,6 +21,12 @@
     <button type="submit">Записаться</button>
 
 </form>
+</div>
+<div class="succes">
+{% if message %}
+<h4><div class="green">{{ cleaned_data.name }}</div> Вы успешно записаны на мастер класс <div class="green">№{{ cleaned_data.master_class }}</div>
+    который пройдет <div class="green">{{ cleaned_data.date }}</div></h4>
+{% endif %}
 </div>
 </body>
 </html>

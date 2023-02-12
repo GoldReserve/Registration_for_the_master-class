@@ -1,6 +1,14 @@
+@import
+url(https://fonts.googleapis.com/css?
+family=Montserrat);
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+
 html {
     height:100%;
-
+    font-style: italic;
     background: -webkit-linear-gradient(0deg, #abf8e7,#8778c7);
     background: linear-gradient(0deg, #abf8e7,#8778c7);
 }
@@ -8,7 +16,7 @@ html {
 h1 {
     text-align: center;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .container {
@@ -21,25 +29,56 @@ h1 {
 
 }
 
-
 input {
   clear: both;
   float: right;
   margin-bottom: 10px;
+  margin-left: 20px;
   width: auto;
 
 }
 
 button {
+    margin: auto;
     padding: 8px 15px;
     text-align: center;
     display: grid;
-    margin: auto;
+
+
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+
+}
+
+.green {
+    color:#3A5293;
+}
+
+select#id_master_class {
+  clear: both;
+  float: right;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 170px;
+  }
+
+.succes {
+
+   width:400px;
+   margin-top: 30px;
+   margin-left: 370px;
+   border-style: solid;
+   border-width: 2px;
 
 }
