@@ -22,11 +22,13 @@
 
 </form>
 </div>
-<div class="succes">
+
 {% if message %}
+<div class="succes">
 <h4><div class="green">{{ cleaned_data.name }}</div> Вы успешно записаны на мастер класс <div class="green">№{{ cleaned_data.master_class }}</div>
     который пройдет <div class="green">{{ cleaned_data.date }}</div></h4>
-{% endif %}
 </div>
+{% endif %}
+
 </body>
 </html>

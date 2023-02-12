@@ -6,16 +6,22 @@ from telegram_bot import send_message
 
 # Create your views here.
 def index(request):
-    message = False
+
+    message = 'Вы успешно записались на мастер класс!'
+
     if request.method == 'POST':
         form = MasterClassRegistration(request.POST)
         if form.is_valid():
-            #Тут мы передаем form.cleaned_data в телегу
             print(form.cleaned_data)
-            message = 'Вы успешно записались на мастер класс!'
+
+            # Тут мы передаем form.cleaned_data в телегу
             send_message(data=form.cleaned_data)
 
     else:
         form = MasterClassRegistration()
-    return render(request, 'index/index.html', {'form': form, 'message': message, 'cleaned_data':form.cleaned_data})
+    try:
+        return render(request, 'index/index.html', {'form': form, 'message': message,
+                                                    'cleaned_data': form.cleaned_data})
+    except AttributeError:
+        return render(request, 'index/index.html', {'form': form})
 
