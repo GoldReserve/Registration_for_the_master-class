@@ -2,17 +2,16 @@ import telebot
 
 import telebot
 
-token = 'наш токен'
-bot = telebot.TeleBot('5992992573:AAGQdyN371hgktZwfcS5qUUVGPbNPJwYWfo')
+#Токен желательно брать из другого файла, а не прописывать здесь
+bot = telebot.TeleBot('')
+
+# В идеале не хардкодить id
 user_id = 456064521
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    # global
-    # user_id = message.chat.id
     bot.send_message(message.chat.id, "Привет ✌️ ")
-    send_message('Ку ку')
-
+    # Отсюда дальше можно chat_id вытаскивать, но поскольку у нас один единственный человек которому бот отправляет то надобности нет
 
 def send_message(data: dict = None):
     message = f"<b>{data['name']}</b> записался на мастер класс <i>№{data['master_class']}</i> на " \
@@ -21,5 +20,3 @@ def send_message(data: dict = None):
     bot.send_message(user_id, message, parse_mode='html')
 
 
-
-# bot.infinity_polling()
